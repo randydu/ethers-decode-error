@@ -60,7 +60,7 @@ export class ErrorDecoder {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const errorData = (error as any).data ?? (error as any).error?.data
 
-    if (errorData === undefined) {
+    if (errorData === undefined || errorData === null) {
       return undefined
     }
 
